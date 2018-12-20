@@ -1,5 +1,17 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<link href="https://fonts.googleapis.com/css?family=Cardo|Josefin+Sans" rel="stylesheet">
+<div class="page-content">
+    {{outlet}}
+    <div class="navigation">
+        {{#link-to "welcome"}}
+            Welcome
+        {{/link-to}}
+        |
+        {{#link-to "colors"}}
+            Colors
+        {{/link-to}}
+        |
+        {{#link-to "movies"}}
+            Movies
+        {{/link-to}}
+    </div>
+</div>

@@ -7,6 +7,16 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('colors');
+
+  this.route('characters', function() {
+    this.route('name', { path: '/:name' });
+  });
+  this.route('movies', function() {
+    this.route('movie', { path: '/:movie' });
+  });
+  this.route('welcome', { path: '/'});
+  this.route('start-here');
 });
 
 export default Router;

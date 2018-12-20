@@ -1,0 +1,122 @@
+{{outlet}}
+<div class="character-page">
+{{#each model as |character| }}
+    {{#link-to "characters.name" character.next class="next-navigation"}}
+        <span> Next Character: </span>{{character.next}}
+    {{/link-to}}
+    <div class="clear-float"></div>
+    <h1>{{character.name}}</h1>
+    <div class="attributes">
+        <div class="attribute-card">
+            <h2> Appears in </h2>
+            <ul class="movie-appearances">
+            {{#each character.movies as |movie| }}
+                {{#link-to "movies.movie" movie.title}}
+                <li>
+                {{movie.title}}
+                </li>
+                {{/link-to}}
+            {{/each}}
+            </ul>
+        </div>
+        
+        <div class="attribute-card outfits-card">
+            <h2> Outfits </h2>
+            <div class="character-outfits">
+            {{#each character.outfits as |outfit| }}
+                <div>
+                <div class="character-outfit" id="{{outfit.stripped}}">
+                    <div class="outfit-colors" >
+                    {{#each outfit.colors as |color| }}
+                        <div class="outfit-color" style="background-color: {{color.hex}}; flex: {{color.importance}};">
+                        </div>
+                    {{/each}}
+                    </div>
+                    <h3> {{outfit.name}} </h3>
+                </div>
+                {{#if editMode}}
+                <div class="color-picker" style="border-color: {{color_preview}}">
+                    <div class="color-preview" style="background-color: {{color_preview}}"></div>
+                    {{input class="large-input" placeholder="hex #" value=newColor key-up="updateColorPreview" }}
+                    <div class="color-choices">
+                        {{#each color_selection as |color| }}
+                            <div {{action "addColor" color character outfit.name}} class="color-choice" style="background-color: {{color.hex}}">+</div>
+                        {{/each}}
+                    </div>
+                </div>
+                {{/if}}
+            </div>
+            {{/each}}
+            </div>
+            <div class="carousel-dots">
+            {{#each character.outfits as |outfit| }}
+                <div {{action "carouselScroll" outfit.stripped}}></div>
+            {{/each}}
+            </div>
+        </div>
+
+        {{#if editMode}}
+        <div class="attribute-card">
+            <h2>Add new outfit</h2>
+            <div class="color-picker">
+                {{input class="large-input" placeholder="new outfit" value=newOutfit key-up="updateColorPreview" }}
+                <div class="color-preview" style="background-color: {{color_preview}}"></div>
+                {{input class="large-input" placeholder="hex #" value=newColor key-up="updateColorPreview" }}
+                <div class="color-choices">
+                    {{#each color_selection as |color| }}
+                        <div {{action "addColor" color character}} class="color-choice" style="background-color: {{color.hex}}">+</div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+        {{#if character.best_friend}}
+        <div class="attribute-card">
+            <h2>Relationships</h2>
+            {{#if character.best_friend}}
+                <label>Best friend</label>
+                {{#link-to "characters.name" best_friend}}
+                    {{character.best_friend}}
+                {{/link-to}}
+            {{/if}}
+            {{#if editMode}}
+            <div>
+                <select id="best-friend-selection">
+                {{#each character.related_characters as |relatedcharacter|}}
+                    <option value = {{relatedcharacter}}> {{relatedcharacter}} </option>
+                {{/each}}
+                </select>
+                <button {{action "assignBestFriend" character}}>Set</button>
+            </div>
+            {{/if}}
+        </div>
+        {{/if}}
+
+        <div class="attribute-card">
+            <h2> Similar characters </h2>
+            <div>
+            {{#each character.related_characters as |relatedcharacter|}}
+                {{#link-to "characters.name" relatedcharacter}}
+                    {{relatedcharacter}}
+                {{/link-to}}
+                |
+            {{/each}}
+            </div>
+        </div>
+ 
+        {{#if editMode}}
+        <div class="attribute-card">
+            <h2> Attribute a movie </h2>
+            <select id="movie-selection">
+                {{#each movie_selection as |movie| }}
+                    <option value = {{movie}}> {{movie}} </option>
+                {{/each}}
+            </select>
+            <button {{action "assignMovie" character}}>Set</button>
+        </div>
+        {{/if}}
+    </div>
+        
+{{/each}}
+</div>
