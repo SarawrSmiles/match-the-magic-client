@@ -110,6 +110,8 @@ body {
         justify-content: center; }
         .page-content .collection .tower .color-list li div {
           margin: 0 3px; }
+        .page-content .collection .tower .color-list li img {
+          height: 18px; }
         .page-content .collection .tower .color-list li .garment-svg svg {
           height: 18;
           fill: pink;
