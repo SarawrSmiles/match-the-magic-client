@@ -5,7 +5,7 @@ export default Controller.extend({
         getFormData: function (color) {
             var newCharacter = this.get("newCharacter");
             var hex = this.get("hex");
-            var url = "http://localhost:5000/addCharacterByColor";
+            var url = "https://match-the-magic-server.herokuapp.com/addCharacterByColor";
             var data = {
                 "color": color.name,
                 "character" : newCharacter,

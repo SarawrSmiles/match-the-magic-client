@@ -4,7 +4,7 @@ export default Controller.extend({
 
     actions: {
         addCharacterToMovie: function(movie) {
-            var post_url = "http://localhost:5000/assignMovieToCharacter";
+            var post_url = "https://match-the-magic-server.herokuapp.com/assignMovieToCharacter";
             var name = this.get("name");
             var title = movie;
             

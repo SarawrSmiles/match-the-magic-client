@@ -21,12 +21,12 @@ export default Controller.extend({
 
     trigger: function() {
                  Ember.run.scheduleOnce('afterRender', this, function() {
-                     var get_url = "http://127.0.0.1:5000/movies";
+                     var get_url = "https://match-the-magic-server.herokuapp.com/movies";
                      var me = this;
                      $.get(get_url).then(function(response) {
                          me.movie_selection.pushObjects(JSON.parse(response));
                      });
-                     var get_url = "http://127.0.0.1:5000/colors";
+                     var get_url = "https://match-the-magic-server.herokuapp.com/colors";
                      var me = this;
                      $.get(get_url).then(function(response) {
                          var colors = []
@@ -38,7 +38,7 @@ export default Controller.extend({
                          console.log(colors)
                          me.color_selection.pushObjects(colors);
                      });
-                     var get_url = "http://127.0.0.1:5000/outfits/" + this.name;
+                     var get_url = "https://match-the-magic-server.herokuapp.com/outfits/" + this.name;
                      $.get(get_url).then(function(response) {
                          me.outfit_selection.pushObjects(JSON.parse(response));
                      });
@@ -57,7 +57,7 @@ export default Controller.extend({
         },
 
         addColor: function(color, character, outfit) {
-            var url = "http://localhost:5000/addCharacterByColor";
+            var url = "https://match-the-magic-server.herokuapp.com/addCharacterByColor";
             if (outfit == undefined) {
                 outfit = this.get("newOutfit")
             }
@@ -90,7 +90,7 @@ export default Controller.extend({
         },
 
         getColors: function () {
-            var get_url = "http://127.0.0.1:5000/colors";
+            var get_url = "https://match-the-magic-server.herokuapp.com/colors";
             var me = this;
             $.get(get_url).then(function(response) {
                 var colors = []
@@ -106,7 +106,7 @@ export default Controller.extend({
             this.toggleProperty("add_color");
         },
         assignBestFriend: function(character) {
-            var post_url = "http://localhost:5000/assignBestFriends";
+            var post_url = "https://match-the-magic-server.herokuapp.com/assignBestFriends";
             var best_friend =document.getElementById("best-friend-selection").value;
 
             var data = {
@@ -126,7 +126,7 @@ export default Controller.extend({
             window.location.reload(true);
         },
         assignMovie: function(character) {
-            var post_url = "http://localhost:5000/assignBestFriends";
+            var post_url = "https://match-the-magic-server.herokuapp.com/assignBestFriends";
             var movie_title =document.getElementById("movie-selection").value;
 
 

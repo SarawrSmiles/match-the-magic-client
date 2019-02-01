@@ -14,7 +14,7 @@ export default Route.extend({
 
       },
       model(params) {
-          var url = "http://127.0.0.1:5000/movie/" + params.movie;
+          var url = "https://match-the-magic-server.herokuapp.com/movie/" + params.movie;
           return $.getJSON(url);
       }
 });
