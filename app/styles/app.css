@@ -24,7 +24,6 @@ body {
   width: 100%;
   position: absolute;
   max-height: 100vh;
-  overflow: hidden;
   top: 0;
   left: 0; }
   .page-content ul {
