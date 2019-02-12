@@ -156,6 +156,9 @@ body {
             }
 
             .color-list {
+                overflow-x: scroll; 
+                -webkit-overflow-scrolling: touch;
+
                 li {
                     display: flex;
                     align-item: center;
