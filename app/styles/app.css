@@ -108,6 +108,11 @@ body {
         display: flex;
         align-item: center;
         justify-content: center; }
+        .page-content .collection .tower .color-list li a {
+          display: flex;
+          align-item: center;
+          justify-content: center;
+          margin: 8px; }
         .page-content .collection .tower .color-list li div {
           margin: 0 3px; }
         .page-content .collection .tower .color-list li img {

@@ -161,6 +161,13 @@ body {
                     align-item: center;
                     justify-content: center;
                     
+                    a {
+                        display: flex;
+                        align-item: center;
+                        justify-content: center;
+                        margin: 8px;
+                    }
+
                     div {
                         margin: 0 3px;
                     }
