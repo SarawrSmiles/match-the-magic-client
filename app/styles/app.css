@@ -1,16 +1,17 @@
+body {
+    margin: 0;
+}
+
 .page-content {
-    overflow-y: hidden;
-    height: 100vh;
 }
 
 .collection {
-    display: flex;
-    flex-direction: row;
-    overflow-y: hidden;
 }
 
 .tower {
-    min-width: 90vw;
+    min-width: 100vw;
+    padding: 0;
+    margin: 0;
     font-size: 40px;
     flex: 1;
 }
@@ -19,8 +20,6 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    overflow: auto;
-    height: 100vh;
 }
 
 .color-list li {
@@ -31,4 +30,8 @@
 
 img {
     display:none;
+}
+
+.navigation {
+    font-size: 40px;
 }

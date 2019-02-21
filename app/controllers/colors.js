@@ -22,6 +22,12 @@ export default Controller.extend({
                 console.log("having issues");
             }   
             window.location.reload(true);
-        }
+        },
+
+        scrollTo: function(anchor) {
+            $('html, body').animate({
+                scrollTop: $("#"+ anchor).offset().top
+            }, 50)
+        },
     }
 });
