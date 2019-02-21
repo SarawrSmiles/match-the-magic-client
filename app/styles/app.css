@@ -1,11 +1,17 @@
+.page-content {
+    overflow-y: hidden;
+}
+
 .collection {
     display: flex;
     flex-direction: row;
+    overflow-y: hidden;
 }
 
 .tower {
-    min-width: 300px;
+    min-width: 90vw;
     font-size: 40px;
+    flex: 1;
 }
 
 .color-list {
