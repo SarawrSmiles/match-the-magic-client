@@ -5,9 +5,21 @@
 
 .tower {
     min-width: 300px;
-    font-size: 20px;
-    }
+    font-size: 40px;
+}
+
+.color-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.color-list li {
+    padding: 2px 60px;
+    text-align: center;
+}
+
 
 img {
     display:none;
-    }
+}
