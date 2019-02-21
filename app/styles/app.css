@@ -1,5 +1,6 @@
 .page-content {
     overflow-y: hidden;
+    height: 100vh;
 }
 
 .collection {
@@ -21,7 +22,7 @@
 }
 
 .color-list li {
-    padding: 8px 60px;
+    padding: 18px 60px;
     text-align: center;
 }
 
