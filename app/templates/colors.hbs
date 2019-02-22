@@ -1,16 +1,15 @@
 <div class="collection">
-<div {{action "scrollTo" "Pink"}}> Pink </div>
-<div class="spalsh tower">
-{{#each model as |color| }}
-        <h1 {{action "scrollTo" color.name}} style="color: {{color.hex}}">{{color.name}}</h1>
-{{/each}}
+<div class="splash tower">
+    {{#each model as |color| }}
+            <h1 {{action "scrollTo" color.name}}>{{color.name}}</h1>
+    {{/each}}
 </div>
 {{#each model as |color| }}
     <div id ={{color.name}} class="tower" style="background-color:{{color.hex}}">
         <h1 style="color: {{color.complement}}">{{color.name}}</h1>
             <ul class="color-list">
             {{#each color.characters as |character| }}
-                 <li style="background-color: {{character.hex}}; color:{{color.complement}};">
+                 <li class="characterColor" style={{colorStyle}}>
                     {{#link-to "characters.name" character.name}}
                         <div>{{character.name}}</div>
                         <img src ="/images/clothes/{{character.garment}}.png">
