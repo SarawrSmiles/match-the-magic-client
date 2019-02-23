@@ -1,0 +1,9 @@
+<div class="character-outfit" id="{{this.stripped}}">
+    <div class="outfit-colors" >
+        {{#each this.colors as |color| }}
+            <div class="outfit-color" hex="{{color.hex}}" flex="{{color.importance}}"></div>
+        {{/each}}
+    </div>
+    <h3> {{this.name}} </h3>
+</div>
+
