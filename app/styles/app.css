@@ -135,3 +135,16 @@ img {
     display: flex;
     width: 100%;
 }
+
+.carousel-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel-dots div{
+    width: 20px;
+    height: 20px;
+    background-color: #e3e3e3;
+    border-radius: 100px;
+    margin: 22px;
+}

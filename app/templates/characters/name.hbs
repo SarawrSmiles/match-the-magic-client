@@ -12,9 +12,7 @@
             <h2> Outfits </h2>
             <div class="character-outfits">
                 {{#each character.outfits as |outfit| }}
-                    <div>
-                        {{character-outfit stripped=outfit.stripped colors=outfit.colors name=outfit.name }}
-                   </div>
+                    {{character-outfit stripped=outfit.stripped colors=outfit.colors name=outfit.name }}
                 {{/each}}
             </div>
             <div class="carousel-dots">
