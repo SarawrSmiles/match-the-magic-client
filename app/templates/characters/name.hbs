@@ -11,35 +11,16 @@
         <div class="attribute-card outfits-card">
             <h2> Outfits </h2>
             <div class="character-outfits">
-            {{#each character.outfits as |outfit| }}
-                <div>
-                <div class="character-outfit" id="{{outfit.stripped}}">
-                    <div class="outfit-colors" >
-                    {{#each outfit.colors as |color| }}
-                        <div class="outfit-color" style="background-color: {{color.hex}}; flex: {{color.importance}};">
-                        </div>
-                    {{/each}}
-                    </div>
-                    <h3> {{outfit.name}} </h3>
-                </div>
-                {{#if editMode}}
-                <div class="color-picker" style="border-color: {{color_preview}}">
-                    <div class="color-preview" style="background-color: {{color_preview}}"></div>
-                    {{input class="large-input" placeholder="hex #" value=newColor key-up="updateColorPreview" }}
-                    <div class="color-choices">
-                        {{#each color_selection as |color| }}
-                            <div {{action "addColor" color character outfit.name}} class="color-choice" style="background-color: {{color.hex}}">+</div>
-                        {{/each}}
-                    </div>
-                </div>
-                {{/if}}
-            </div>
-            {{/each}}
+                {{#each character.outfits as |outfit| }}
+                    <div>
+                        {{character-outfit stripped=outfit.stripped colors=outfit.colors name=outfit.name }}
+                   </div>
+                {{/each}}
             </div>
             <div class="carousel-dots">
-            {{#each character.outfits as |outfit| }}
-                <div {{action "carouselScroll" outfit.stripped}}></div>
-            {{/each}}
+                {{#each character.outfits as |outfit| }}
+                    <div {{action "carouselScroll" outfit.stripped}}></div>
+                {{/each}}
             </div>
         </div>
 

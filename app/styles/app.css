@@ -88,7 +88,7 @@ img {
 }
 
 .character-page h2 {
-    font-size: 20px;
+    font-size: 50px;
     margin: 15px;
     padding: 0;
 }
@@ -97,7 +97,6 @@ img {
     list-style: none;
     margin: 0;
     padding: 0;
-    font-size: 15px;
 }
 
 .character-page .attribute-card {
@@ -113,4 +112,26 @@ img {
 
 .clear-float {
     clear: both;
+}
+
+.outfits-card .character-outfits {
+    display: flex;
+    overflow: scroll;
+    width: 100%;
+}
+
+.character-outfit {
+    width: 800px;
+    margin-left: 40px;
+}
+
+.character-outfit h3 {
+    text-align: left;
+    font-size: 38px;
+    margin: 0;
+}
+.outfit-colors {
+    height: 500px;
+    display: flex;
+    width: 100%;
 }
