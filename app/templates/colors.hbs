@@ -5,16 +5,11 @@
     {{/each}}
 </div>
 {{#each model as |color| }}
-    <div id ={{color.name}} class="tower" style="background-color:{{color.hex}}">
-        <h1 style="color: {{color.complement}}">{{color.name}}</h1>
+    <div id ={{color.name}} class="tower">
+        <h1>{{color.name}}</h1>
             <ul class="color-list">
             {{#each color.characters as |character| }}
-                 <li class="characterColor" style={{colorStyle}}>
-                    {{#link-to "characters.name" character.name}}
-                        <div>{{character.name}}</div>
-                        <img src ="/images/clothes/{{character.garment}}.png">
-                    {{/link-to}}
-                </li>
+                {{color-swatch name=character.name hex=character.hex}}
             {{/each}}
             </ul>
     </div>

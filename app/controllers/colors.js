@@ -1,15 +1,11 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
-    color: "red",
-    didUpdate() {
-        this.color= "blue";
-        debugger
+    init() { 
+        console.log("test");
+        this._super();
+        window.scrollTo(0,0);
     },
-    colorStyle: Ember.computed('color', function() {
-        var color = this.get('color');
-        return new Ember.String.htmlSafe("background-color: " + color);
-    }),
     actions: {
         scrollTo: function(anchor) {
             $('html, body').animate({
