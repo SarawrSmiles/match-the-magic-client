@@ -2,15 +2,16 @@ body {
     margin: 0;
     top: 80px;
     position: absolute;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Quattrocento', serif;
 }
 
 a {
     text-decoration: none;
+    font-family: 'Thasadith', sans-serif;
 }   
 
 h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Staatliches', cursive;
 }
 
 .splash {
@@ -19,8 +20,10 @@ h1 {
 }
 
 .splash h1 {
+    font-family: 'Libre Barcode 39 Extended Text', cursive;
     font-weight: normal;
     color: #3e3e3e;
+    font-size: 132px;
 }
 
 .page-content {
@@ -71,5 +74,5 @@ img {
 .navigation a {
     text-decoration: none;
     color: white;
-    margin: 6px;
+    margin: 20px;
 }
