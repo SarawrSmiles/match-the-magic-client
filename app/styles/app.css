@@ -27,6 +27,8 @@ h1 {
 }
 
 .page-content {
+    font-size: 40px;
+    width: 100vw;
 }
 
 .collection {
@@ -36,7 +38,6 @@ h1 {
     min-width: 100vw;
     padding: 0;
     margin: 0;
-    font-size: 40px;
     flex: 1;
 }
 
@@ -75,4 +76,41 @@ img {
     text-decoration: none;
     color: white;
     margin: 20px;
+}
+
+.character-page {
+    text-align: center;
+    width: 100%;
+}
+
+.character-page h1 {
+    margin: 5px;
+}
+
+.character-page h2 {
+    font-size: 20px;
+    margin: 15px;
+    padding: 0;
+}
+
+.character-page ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+.character-page .attribute-card {
+    margin: 50px;
+    border-top: 1px solid #3e3e3e;;
+}
+
+.next-navigation {
+    float: right;
+    font-size: 33px;
+    margin: 5px 30px;
+}
+
+.clear-float {
+    clear: both;
 }

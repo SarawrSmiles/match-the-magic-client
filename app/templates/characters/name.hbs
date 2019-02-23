@@ -7,19 +7,7 @@
     <div class="clear-float"></div>
     <h1>{{character.name}}</h1>
     <div class="attributes">
-        <div class="attribute-card">
-            <h2> Appears in </h2>
-            <ul class="movie-appearances">
-            {{#each character.movies as |movie| }}
-                {{#link-to "movies.movie" movie.title}}
-                <li>
-                {{movie.title}}
-                </li>
-                {{/link-to}}
-            {{/each}}
-            </ul>
-        </div>
-        
+       
         <div class="attribute-card outfits-card">
             <h2> Outfits </h2>
             <div class="character-outfits">
@@ -71,6 +59,19 @@
         </div>
         {{/if}}
 
+        <div class="attribute-card">
+            <h2> Appears in </h2>
+            <ul class="movie-appearances">
+            {{#each character.movies as |movie| }}
+                {{#link-to "movies.movie" movie.title}}
+                <li>
+                {{movie.title}}
+                </li>
+                {{/link-to}}
+            {{/each}}
+            </ul>
+        </div>
+ 
         {{#if character.best_friend}}
         <div class="attribute-card">
             <h2>Relationships</h2>
