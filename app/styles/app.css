@@ -56,11 +56,6 @@ h1 {
     text-align: center;
 }
 
-
-img {
-    display:none;
-}
-
 .navigation {
     position: fixed;
     top: 0px;
@@ -69,6 +64,12 @@ img {
     width: 100%;
     background: #3e3e3e;
     display:flex;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -99,7 +100,7 @@ img {
     padding: 0;
 }
 
-.character-page .attribute-card {
+.attribute-card {
     margin: 50px;
     border-top: 1px solid #3e3e3e;;
 }
@@ -147,4 +148,32 @@ img {
     background-color: #e3e3e3;
     border-radius: 100px;
     margin: 22px;
+}
+
+.movie-page {
+    text-align: center;
+}
+
+.movie ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.movie a {
+    color: #50B3D6;
+}
+
+.movie-page .long-list li{
+    border-left: 13px solid #50B3D6;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+a {
+    color: #50B3D6;
+}
+
+.long-list {
+    list-style: none;
+    text-align: left;
 }

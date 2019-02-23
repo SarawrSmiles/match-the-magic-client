@@ -1,9 +1,9 @@
-<div class="long-list-container">
+<div class="movie-page">
     <div id="movie-card">
         {{outlet}}
     </div>
-    <div class="long-list">
-        <ul class="four-columns movie">
+    <div>
+        <ul class="long-list four-columns movie">
         {{#each model as |movie|}}
             {{#link-to "movies.movie" movie anchor='movie-card' }}
             <li>{{movie}}</li>
