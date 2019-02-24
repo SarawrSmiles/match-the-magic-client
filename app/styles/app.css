@@ -177,3 +177,8 @@ a {
     list-style: none;
     text-align: left;
 }
+
+.tower-stories, .tower {
+    padding: 30px;
+}
+
