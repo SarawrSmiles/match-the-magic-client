@@ -17,7 +17,9 @@
             </div>
             <div class="carousel-dots">
                 {{#each character.outfits as |outfit| }}
-                    <div {{action "carouselScroll" outfit.stripped}}></div>
+                    <div class="clickable-region" {{action "carouselScroll" outfit.stripped}}>
+                        <div class="visible-region"></div>
+                    </div>
                 {{/each}}
             </div>
         </div>

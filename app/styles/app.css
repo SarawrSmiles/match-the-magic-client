@@ -142,12 +142,16 @@ h1 {
     align-items: center;
     justify-content: center;
 }
-.carousel-dots div{
+
+.carousel-dots .clickable-region{
+   padding: 30px; 
+}
+
+.carousel-dots .visible-region{
     width: 20px;
     height: 20px;
     background-color: #e3e3e3;
     border-radius: 100px;
-    margin: 22px;
 }
 
 .movie-page {
