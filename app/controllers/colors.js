@@ -8,7 +8,6 @@ export default Controller.extend({
     },
     actions: {
         scrollTo: function(anchor) {
-            console.log("scrolling to " + anchor);
             $('html, body').animate({
                 scrollTop: $("#"+ anchor).offset().top - 80
             }, 50)
