@@ -1,7 +1,9 @@
 <div class="collection">
 <div class="splash tower">
     {{#each model as |color| }}
-            <h1 {{action "scrollTo" color.name}}>{{color.name}}</h1>
+        <div {{action "scrollTo" color.name}}>
+            <h1>{{color.name}}</h1>
+        </div>
     {{/each}}
 </div>
 {{#each model as |color| }}
