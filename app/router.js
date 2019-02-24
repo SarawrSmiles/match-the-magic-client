@@ -17,6 +17,7 @@ Router.map(function() {
   });
   this.route('welcome', { path: '/'});
   this.route('start-here');
+  this.route('loading');
 });
 
 export default Router;

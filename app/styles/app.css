@@ -182,3 +182,11 @@ a {
     padding: 30px;
 }
 
+.loading-page {
+    margin-top: 160px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+
