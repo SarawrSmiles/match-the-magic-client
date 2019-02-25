@@ -1,0 +1,17 @@
+<h1>{{this.title}}</h1>
+<div class="movie-characters">
+    <div class="attribute-card">
+        <h2>Characters</h2>
+        <ul>
+        {{#each this.characters as |character|}}
+            {{#link-to "characters.name" character.name}}
+                <li>{{character.name}}</li>
+            {{/link-to}}
+        {{else}}
+            To be added
+        {{/each}}
+        </ul>
+    </div>
+</div>
+
+
