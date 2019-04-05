@@ -18,6 +18,7 @@ Router.map(function() {
   this.route('welcome', { path: '/'});
   this.route('start-here');
   this.route('loading');
+  this.route('200');
 });
 
 export default Router;
