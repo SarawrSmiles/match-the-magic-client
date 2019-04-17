@@ -183,7 +183,8 @@ a {
 }
 
 .tower-stories p{
-    padding: 30px;
+    padding: 40px 100px 0 100px;
+    max-width: 800px;
 }
 
 .loading-page {
