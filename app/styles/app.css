@@ -221,3 +221,20 @@ a {
     flex-direction: column;
 }
 
+.definition {
+    padding: 0 0 40px 85px;
+}
+
+.definition h1 {
+    text-align: left;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.definition p {
+    text-align: justify;
+    margin: 0;
+    padding: 0 80px;
+}
+
