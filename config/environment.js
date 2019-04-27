@@ -4,7 +4,7 @@ module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'db',
     environment,
-    rootURL: '/',
+    rootURL: '/match-the-magic-client',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
