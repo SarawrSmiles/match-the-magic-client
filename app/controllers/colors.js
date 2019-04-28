@@ -8,12 +8,10 @@ export default Controller.extend({
     },
     actions: {
         scrollTo: function(anchor) {
-         alert("i am clicked");
-         location.hash = '#' + anchor;
-         //   setTimeout(window.scrollTo(100,100),100);
-         //   $('html, body').animate({
-         //       scrollTop: $("#"+ anchor).offset().top - 80
-         //   }, 50)
+            setTimeout(window.scrollTo(100,100),100);
+            $('html, body').animate({
+                scrollTop: $("#"+ anchor).offset().top - 80
+            }, 50)
         },
     }
 });
