@@ -20,7 +20,7 @@ h1 {
 }
 
 .splash h1 {
-/*    font-family: 'Libre Barcode 39 Extended Text', cursive; */
+    font-family: 'Libre Barcode 39 Extended Text', cursive; 
     font-weight: normal;
     color: #3e3e3e;
     font-size: 132px;
